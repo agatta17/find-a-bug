@@ -4,8 +4,10 @@ body {
 }
 .table {
   background-image: url("../img/background.png");
-  padding-left: 103px;
-  padding-top: 129px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 7.15vw;
+  padding-top: 8.96vw;
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -19,14 +21,15 @@ body {
 .description {
   font-size: 19px;
   margin-top: 0;
-  margin-bottom: 45px;
+  margin-bottom: 3.13vw;
+  /*margin-bottom: 45px;*/
 }
 .levels-list {
   font-size: 50px;
   line-height: 83px;
   list-style-type: none;
   margin-top: 0;
-  margin-bottom: 100px;
+  margin-bottom: 6.94vw;
 }
 .levels-list__item_selected {
   position: relative;
@@ -58,7 +61,7 @@ body {
   font-style: normal;
   font-weight: bold;
   outline: 0;
-  margin-bottom: 300px;
+  margin-bottom: 20.83vw;
 }
 .start:hover {
   cursor: pointer;
@@ -66,8 +69,8 @@ body {
 }
 .illustration {
   position: absolute;
-  right: 50px;
-  top: 500px;
+  right: 3.47vw;
+  top: 34.7vw;
 }
 .illustration__card-lower {
   position: absolute;
