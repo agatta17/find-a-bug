@@ -1,11 +1,11 @@
 body {
   padding: 0;
   margin: 0;
-}
-.table {
   background-image: url("../img/background.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+.menu {
   padding-left: 7.15vw;
   padding-top: 8.96vw;
   font-family: Roboto, sans-serif;
@@ -78,4 +78,57 @@ body {
 }
 .illustration__card-upper {
   position: relative;
+}
+.table {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.row:last-child {
+  margin-bottom: 0;
+}
+.card {
+  width: 27.72vh;
+  height: 43.35vh;
+  margin-right: 20px;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.card:last-child {
+  margin-right: 0;
+}
+.card_animated:hover {
+  cursor: pointer;
+  filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
+  transform: translateY(-22px) rotate(-3.08deg);
+}
+.card_inverted {
+  transform: rotateY(180deg);
+}
+
+.closed-card, .open-card {
+  width: 27.72vh;
+  height: 43.35vh;
+  position: absolute;
+  backface-visibility: hidden;
+  background-size: 100% 100%;
+}
+.closed-card {
+  background-image: url('../img/closed-card.png');
+}
+.open-card {
+  background-image: url('../img/game-over.png');
+  transform: rotateY(180deg);
+}
+.hidden {
+  display: none;
 }

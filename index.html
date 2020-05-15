@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="fonts/fonts.css">
 </head>
 <body>
-  <div class="table">
+  <div class="menu">
     <h1 class="title">
       Выберите уровень сложности:
     </h1>
@@ -15,11 +15,11 @@
       Выберите сложность и игра начнется. Чем выше уровень - тем больше будет выборка карт.
     </p>
     <ul class="levels-list">
-      <li class="levels-list__item levels-list__item_selected">Простой</li>
-      <li class="levels-list__item">Средний</li>
-      <li class="levels-list__item">Сложный</li>
+      <li class="levels-list__item levels-list__item_selected" id="low-level">Простой</li>
+      <li class="levels-list__item" id="middle-level">Средний</li>
+      <li class="levels-list__item" id="complicated-level">Сложный</li>
     </ul>
-    <button class="start">
+    <button class="start" id="start-button">
       Начать игру
     </button>
     <div class="illustration">
@@ -27,5 +27,6 @@
       <img class="illustration__card-upper" alt="" src="img/illustration-card-2.png">
     </div>
   </div>
+  <script src="scripts/script.js"></script>
 </body>
 </html>
