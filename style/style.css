@@ -126,8 +126,13 @@ body {
   background-image: url('../img/closed-card.png');
 }
 .open-card {
-  background-image: url('../img/game-over.png');
   transform: rotateY(180deg);
+}
+.game-over-card {
+  background-image: url('../img/game-over.png');
+}
+.bug-card {
+  background-image: url('../img/bug-card.png');
 }
 .hidden {
   display: none;

@@ -7,7 +7,8 @@ middleLevel.addEventListener("click", () => numberOfCards = 6);
 complicatedLevel.addEventListener("click", () => numberOfCards = 10);
 
 
-const createCard = (row) => {
+const createCard = (row,classOfOpen,idOfCard) => {
+  idOfCard++;
   const card = document.createElement('div');
   card.classList.add('card','card_animated');
   row.append(card);
@@ -15,23 +16,35 @@ const createCard = (row) => {
   closedCard.classList.add('closed-card');
   card.append(closedCard);
   const openCard = document.createElement('div');
-  openCard.classList.add('open-card');
+  openCard.classList.add('open-card',classOfOpen);
   card.append(openCard);
+  return idOfCard;
 }
+
 const createRow = (table) => {
   const row = document.createElement('div');
   row.classList.add('row');
   table.append(row);
   return row;
 }
+
+const getRandomInteger = (min, max) => {
+  let random = min + Math.random() * (max + 1 - min);
+  return Math.floor(random);
+}
+
 const createCards = () => {
   const table = document.querySelector('.table');
   let numberOfRows = (numberOfCards === 3) ? 1 : 2;
   let numberOfCardsinRow = (numberOfCards === 3) ? 3 : numberOfCards/2;
+  let cardNumberWithBug =  getRandomInteger(1, numberOfCards);
+  console.log(cardNumberWithBug);
+  let idOfCard = 1;
   for (let i = 0; i < numberOfRows; i++) {
     let row = createRow(table);
     for (let i = 0; i < numberOfCardsinRow; i++) {
-      createCard(row);
+      if (idOfCard===cardNumberWithBug) idOfCard= createCard(row,'bug-card',idOfCard)
+      else idOfCard = createCard(row,'game-over-card',idOfCard);
     }
   }
 }
