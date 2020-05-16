@@ -22,7 +22,6 @@ body {
   font-size: 19px;
   margin-top: 0;
   margin-bottom: 3.13vw;
-  /*margin-bottom: 45px;*/
 }
 .levels-list {
   font-size: 50px;
@@ -114,8 +113,8 @@ body {
 .card_inverted {
   transform: rotateY(180deg);
 }
-
-.closed-card, .open-card {
+.closed-card,
+.open-card {
   width: 27.72vh;
   height: 43.35vh;
   position: absolute;
