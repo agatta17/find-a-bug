@@ -2,16 +2,8 @@ const lowLevel = document.getElementById('low-level');
 const middleLevel = document.getElementById('middle-level');
 const complicatedLevel = document.getElementById('complicated-level');
 const startButton = document.getElementById('start-button');
-
 let numberOfCards = 3;
 let allCardsAreClosed;
-
-lowLevel.addEventListener("click", () => numberOfCards = 3);
-middleLevel.addEventListener("click", () => numberOfCards = 6);
-complicatedLevel.addEventListener("click", () => numberOfCards = 10);
-startButton.addEventListener("click", startGame);
-
-setLevel();
 
 const setLevel = () => {
   const levels = document.querySelectorAll('.levels-list__item');
@@ -101,3 +93,9 @@ const startOver = () => {
   menu.classList.remove('hidden');
   table.remove();
 }
+
+lowLevel.addEventListener("click", () => numberOfCards = 3);
+middleLevel.addEventListener("click", () => numberOfCards = 6);
+complicatedLevel.addEventListener("click", () => numberOfCards = 10);
+setLevel();
+startButton.addEventListener("click", startGame);
