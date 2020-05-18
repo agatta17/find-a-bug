@@ -68,6 +68,11 @@ const createCard = (row,classOfOpen,idOfCard) => {
   const openCard = document.createElement('div');
   openCard.classList.add('open-card',classOfOpen);
   card.append(openCard);
+  if (numberOfCards === 10) {
+    card.classList.add('card-small');
+    closedCard.classList.add('card-small');
+    openCard.classList.add('card-small');
+  }
   return idOfCard;
 }
 
