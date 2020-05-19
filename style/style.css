@@ -131,6 +131,10 @@ body {
 .open-card {
   transform: rotateY(180deg);
 }
+.card-small {
+  width: 13.86vw;
+  height: 21.68vw;
+}
 .game-over-card {
   background-image: url('../img/game-over.png');
 }
