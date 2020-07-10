@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Игра "Найди баг"</title>
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="fonts/fonts.css">
+</head>
+<body>
+  <div class="menu">
+    <h1 class="title">
+      Выберите уровень сложности:
+    </h1>
+    <p class="description">
+      Выберите сложность и игра начнется. Чем выше уровень - тем больше будет выборка карт.
+    </p>
+    <ul class="levels-list">
+      <li class="levels-list__item levels-list__item_selected" id="low-level">Простой</li>
+      <li class="levels-list__item" id="middle-level">Средний</li>
+      <li class="levels-list__item" id="complicated-level">Сложный</li>
+    </ul>
+    <button class="start" id="start-button">
+      Начать игру
+    </button>
+    <div class="illustration">
+      <img class="illustration__card-lower" alt="" src="img/illustration-card-1.png">
+      <img class="illustration__card-upper" alt="" src="img/illustration-card-2.png">
+    </div>
+  </div>
+  <script src="scripts/script.js"></script>
+</body>
+</html>
